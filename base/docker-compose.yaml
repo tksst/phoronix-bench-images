@@ -1,0 +1,6 @@
+# イメージの試行錯誤目的
+
+services:
+  demo:
+    build: ./
+    command: sh -c 'trap "exit 0" INT TERM HUP; while true; do sleep 1; done'
