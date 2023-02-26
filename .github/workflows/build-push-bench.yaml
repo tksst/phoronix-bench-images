@@ -1,0 +1,25 @@
+name: build and push phoronix-bench-image-bench
+
+on:
+  push:
+    paths:
+      - "bench/**"
+      - ".github/workflows/build-push.yaml"
+      - ".github/workflows/build-push-bench.yaml"
+  pull_request:
+    paths:
+      - "bench/**"
+      - ".github/workflows/build-push.yaml"
+      - ".github/workflows/build-push-bench.yaml"
+  workflow_dispatch:
+
+jobs:
+  build-and-push:
+    name: Build and Push phoronix-bench-image-bench
+    permissions:
+      contents: read
+      packages: write
+    uses: ./.github/workflows/build-push.yaml
+    with:
+      image-name: phoronix-bench-image-bench
+      context-directory: bench

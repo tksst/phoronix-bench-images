@@ -1,0 +1,37 @@
+#!/usr/bin/expect
+
+spawn /tmp/build-suite.sh
+
+expect "Enter name of suite:"
+send "my-benchmark\n"
+
+expect "Select test type:"
+send "8\n"
+
+expect "Enter suite maintainer name:"
+send "tksst\n"
+
+expect "Enter suite description:"
+send "my benchmark\n"
+
+expect "Bind current test profile versions to test suite (Y/n):"
+send "y\n"
+
+# pts/openssl
+expect "Algorithm:"
+# 2: SHA256
+send "2\n"
+
+# pts/stream
+expect "Type:"
+# 1: Copy
+send "1\n"
+
+# pts/go-benchmark
+expect "Test:"
+# 5: Test All Options
+send "5\n"
+
+expect "Select next operation:"
+send "3\n"
+expect "Saved -- to run this suite, type: phoronix-test-suite benchmark my-benchmark"
