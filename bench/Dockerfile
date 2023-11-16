@@ -1,6 +1,6 @@
-# syntax=docker/dockerfile:1.4.1
+# syntax=docker/dockerfile:1.4.1@sha256:91f386bc3ae6cd5585fbd02f811e295b4a7020c23c7691d686830bf6233e91ad
 
-FROM ghcr.io/tksst/phoronix-bench-images/phoronix-bench-image-base:sha-e64b3d1-20230226T033032Z
+FROM ghcr.io/tksst/phoronix-bench-images/phoronix-bench-image-base:sha-e64b3d1-20230226T033032Z@sha256:487b61d825545410230bacdf3ac5b5fe3d1ae0f66818ab92ab0b7259859d0965
 
 ARG MYTESTS="pts/openssl-3.0.1 pts/stream-1.3.4 pts/go-benchmark-1.1.4 pts/node-express-loadtest-1.0.1 pts/node-web-tooling-1.0.1 pts/git-1.1.0"
 ENV MYTESTS $MYTESTS
