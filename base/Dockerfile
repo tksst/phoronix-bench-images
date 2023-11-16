@@ -1,6 +1,6 @@
-# syntax=docker/dockerfile:1.4.1
+# syntax=docker/dockerfile:1.4.1@sha256:91f386bc3ae6cd5585fbd02f811e295b4a7020c23c7691d686830bf6233e91ad
 
-FROM debian:bullseye-20230208-slim
+FROM debian:bullseye-20230208-slim@sha256:8eaee63a5ea83744e62d5bf88e7d472d7f19b5feda3bfc6a2304cc074f269269
 
 RUN --mount=type=tmpfs,target=/var/lib/apt/lists \
     --mount=type=tmpfs,target=/var/cache/apt \
