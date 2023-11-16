@@ -1,4 +1,4 @@
-# syntax=docker/dockerfile:1.4.1
+# syntax=docker/dockerfile:1.6.0@sha256:ac85f380a63b13dfcefa89046420e1781752bab202122f8f50032edf31be0021
 
 FROM ghcr.io/tksst/phoronix-bench-images/phoronix-bench-image-base:sha-e64b3d1-20230226T033032Z
 
